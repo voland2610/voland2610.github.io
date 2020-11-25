@@ -1,0 +1,47 @@
+body  {
+    margin: 0;
+    padding: 0;
+    background: rgb(81,79,111);
+    background: radial-gradient(circle, rgba(81,79,111,1) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);
+}
+
+.logo{
+    color: white;
+    width: 100%;
+    display: block;
+    text-align: center; 
+}
+
+.graphiclogo{
+    font-size: 70px;
+    color: #A9A9A9;
+    padding-bottom: 0px;
+}
+
+.lowerlogo{
+    font-size: 30px;
+    font-family: serif;
+    margin-left: 20px;
+}
+
+
+.carousel  {
+    transform: translateY(-150px);
+    height: 600px;
+    perspective: 400px;
+}
+
+.carousel .carousel-item  {
+    width: 400px;
+}
+
+.carousel .carousel-item  img  {
+    width: 100%;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
