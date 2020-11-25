@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/lightbox.css">
 	<title></title>
 </head>
 <body>
@@ -15,14 +16,12 @@
   </div>
 	<div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="5.jpg"></div>
-      <div class="swiper-slide"><img src="2.jpg"></div>
-      <div class="swiper-slide"><img src="3.jpg"></div>
-      <div class="swiper-slide"><img src="6.jpg"></div>
-      <div class="swiper-slide"><img src="4.jpg"></div>
+      <div class="swiper-slide" data-lightbox="test"><img height="800" width="800" src="5.jpg"></div>
+      <div class="swiper-slide" data-lightbox="test"><img height="800" width="800" src="2.jpg"></div>
+      <div class="swiper-slide" data-lightbox="test"><img height="800" width="800" src="3.jpg"></div>
+      <div class="swiper-slide" data-lightbox="test"><img height="800" width="800" src="6.jpg"></div>
+      <div class="swiper-slide" data-lightbox="test"><img height="800" width="800" src="4.jpg"></div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
   </div>
   <div id="footer">
     <p>
@@ -30,6 +29,7 @@
     </p>
       телефон
 </div>
+  <script src="dist/js/lightbox-plus-jquery.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
@@ -43,6 +43,14 @@
         depth: 200,
         modifier: 1,
         slideShadows: true,
+      },
+      zoom: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
       loop: true,
       autoplay: {
