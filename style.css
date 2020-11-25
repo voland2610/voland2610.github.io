@@ -25,23 +25,23 @@ body  {
 }
 
 
-.carousel  {
+.carousel{
     transform: translateY(-150px);
-    height: 600px;
-    perspective: 400px;
+    height: 1000px;
+    perspective: 600px;
 }
 
-.carousel .carousel-item  {
+.carousel .carousel-item{
     width: 400px;
 }
 
-.carousel .carousel-item  img  {
+.carousel .carousel-item  img{
     width: 100%;
 }
 
 .footer{
     background-color: black;
     color: white;
-    padding-top: 90px;
-    padding-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
