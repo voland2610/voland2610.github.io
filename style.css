@@ -6,8 +6,12 @@ body  {
 }
 
 .logo{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    overflow: hidden;
     color: white;
-    width: 100%;
     display: block;
     text-align: center; 
 }
