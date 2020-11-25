@@ -1,61 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
 </head>
 <body>
+  <div id="wrap">  
     <header>
-        <div class="logo">
-            <div class="graphiclogo">Ваше имя</p>
-        	<div class="lowerlogo">Телефон</p>
-        </div>
+       <div id="menu">asdasdasd</div>
+       <div id="menu">asdasdasd</div>
     </header>
-    
-    <div class="carousel">
-        
-        <div class="carousel-item">
-            <img src="1.jpg">
-        </div>
-        <div class="carousel-item">
-            <img src="2.jpg">
-        </div>
-        <div class="carousel-item">
-            <img src="3.jpg">
-        </div>
-        <div class="carousel-item">
-            <img src="4.jpg">
-        </div>
-        <div class="carousel-item">
-            <img src="5.jpg">
-        </div>
-        <div class="carousel-item">
-            <img src="6.jpg">
-        </div>
+  </div>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="5.jpg"></div>
+      <div class="swiper-slide"><img src="2.jpg"></div>
+      <div class="swiper-slide"><img src="3.jpg"></div>
+      <div class="swiper-slide"><img src="6.jpg"></div>
+      <div class="swiper-slide"><img src="4.jpg"></div>
     </div>
-
-    <div class="footer">
-    	<div class="container">
-    		<div class="col-2">
-    			<p class="footer__name">79000000000</p>
-    			<p class="footer__name">google@gmail.com</p>
-    		</div>		
-    	</div>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-         $(document).ready(function(){
-    $('.carousel').carousel();
-  });
-      
-    </script>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+    <div class="center">asdasdasdasd</div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
 </body>
 </html>

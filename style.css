@@ -1,51 +1,61 @@
-body  {
-    margin: 0;
-    padding: 0;
-    background: rgb(81,79,111);
-    background: radial-gradient(circle, rgba(81,79,111,1) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.logo{
-    margin: 0 auto;
-    width: 90%;
+.center{
     max-width: 1200px;
-    height: 100%;
-    overflow: hidden;
-    color: white;
-    display: block;
-    text-align: center; 
-}
-
-.graphiclogo{
-    font-size: 70px;
-    color: #A9A9A9;
-    padding-bottom: 0px;
-}
-
-.lowerlogo{
-    font-size: 30px;
-    font-family: serif;
-    margin-left: 20px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box
 }
 
 
-.carousel{
-    transform: translateY(-150px);
-    height: 1000px;
-    perspective: 600px;
+header{
+ width: 100%;
+ background: #111;
+ height: 70px;
 }
 
-.carousel .carousel-item{
-    width: 400px;
+img{
+    object-fit: cover;
+    width: 700px;
+    height: 700px;
 }
 
-.carousel .carousel-item  img{
+body{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+
+.swiper-container {
     width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
 
-.footer{
-    background-color: black;
-    color: white;
-    padding-top: 40px;
-    padding-bottom: 20px;
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 700px;
+    height: 700px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+
+}
+
+#wrap{
+    text-align: center;
+}
+
+#menu{
+    font-size: 30px;
+    color: white; 
 }
