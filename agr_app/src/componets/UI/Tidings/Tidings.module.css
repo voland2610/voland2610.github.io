@@ -1,0 +1,87 @@
+.news_container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .news_item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .news_title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .news_body {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .news_date {
+    font-size: 14px;
+    color: #999;
+  }
+
+  .news_category {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Общие стили для категории новостей */
+  }
+
+  .news_category:hover {
+    background-color: #bdc1c7;
+  }
+  
+  .news_category_master_class {
+    color: blue;
+    background-color: lightblue;
+    /* Стили для категории "Мастер-классы" */
+  }
+  
+  .news_category_olympiad {
+    color: green;
+    background-color: lightgreen;
+    /* Стили для категории "Олимпиады" */
+  }
+  
+  .news_category_default {
+    color: black;
+    background-color: lightgray;
+    /* Стили для остальных категорий */
+  }
+
+  .categories_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .categories_name{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+  }
+
+  .categories_name:hover {
+    background-color: #0056b3;
+  }
+
+  .categories_name:active {
+    background-color: #6b7075;
+  }
