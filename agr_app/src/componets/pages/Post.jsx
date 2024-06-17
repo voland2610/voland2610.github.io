@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import Category_post from '../tidings/Category_post';
 
 export default function Post(){
-  const { postId } = useParams(); // Получаем id поста из параметров маршрута
+  const { postId } = useParams(); 
 
-  // Находим пост с соответствующим id
+ 
   const post = Posts.find(item => item.id === parseInt(postId));
 
-  // Если пост не найден, выводим сообщение об ошибке
+  
   if (!post) {
     return (
     <>

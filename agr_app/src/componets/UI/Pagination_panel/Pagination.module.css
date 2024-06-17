@@ -20,6 +20,14 @@
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
   }
+
+  @media (max-width: 768px) {
+    .page_link {
+      display: block;
+      padding: 7px 11px;
+      font-size: 10px;
+    }
+  }
   
   .page_link:hover {
     background-color: #007bff;

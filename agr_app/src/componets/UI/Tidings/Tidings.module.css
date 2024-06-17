@@ -42,12 +42,6 @@
     background-color: #bdc1c7;
   }
   
-  .news_category_master_class {
-    color: blue;
-    background-color: lightblue;
-    /* Стили для категории "Мастер-классы" */
-  }
-  
   .news_category_olympiad {
     color: green;
     background-color: lightgreen;
@@ -78,10 +72,30 @@
     text-decoration: none;
   }
 
+  @media (max-width: 768px) {
+    .categories_name{
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+  }
+
   .categories_name:hover {
     background-color: #0056b3;
   }
 
   .categories_name:active {
     background-color: #6b7075;
+  }
+
+  .search_input {
+    width: 25em;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }

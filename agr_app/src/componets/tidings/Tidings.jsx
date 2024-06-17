@@ -13,6 +13,7 @@ export default function Tidings() {
     const [newsPage] = useState(5); // сколько должно выводиться на странице постов
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [searchKeyword, setSearchKeyword] = useState('');
 
     useEffect(() => {
       setNewsType(newsData);  
@@ -31,7 +32,15 @@ export default function Tidings() {
       setCurrentP(1); // Сбросить текущую страницу
     }
 
-    const filteredNews = selectedCategory ? newsType.filter(item => item.category === selectedCategory) : newsType;
+    const handleSearch = (e) => {
+      setSearchKeyword(e.target.value);
+      setCurrentP(1); // Сбросить текущую страницу при поиске
+    }
+
+    const filteredNews = newsType
+      .filter(item => selectedCategory ? item.category === selectedCategory : true)
+      .filter(item => item.title.toLowerCase().includes(searchKeyword.toLowerCase()));
+
     const lastIndex = currentP * newsPage;
     const firstIndex = lastIndex - newsPage;
     const currentNow = filteredNews.slice(firstIndex, lastIndex);
@@ -43,6 +52,13 @@ export default function Tidings() {
     return (
       <div className={classes.news_container}>
         <h1>Агрегатор новостей С.Ю Витте</h1>
+        <input
+          type="text"
+          placeholder="Поиск по ключевому слову"
+          value={searchKeyword}
+          onChange={handleSearch}
+          className={classes.search_input}
+        />
         <Category
           categories={categories}
           showAllNews={showAllNews}
@@ -51,7 +67,7 @@ export default function Tidings() {
         {currentNow.map((item, index) => (
           <div className={classes.news_item} key={index}>
             <h3 className={classes.news_title}>{item.title}</h3>
-            <Category_post filterNewsByCategory ={filterNewsByCategory} category_post={item.category}></Category_post>
+            <Category_post disableClick={false} filterNewsByCategory={filterNewsByCategory} category_post={item.category}></Category_post>
             <p className={classes.news_date}>{item.date}</p>
             <Tidings_button postId={item.id} />
           </div>
@@ -61,8 +77,8 @@ export default function Tidings() {
           total={filteredNews.length}
           paginating={paginating}
         />
-        <button className={pagination_button.button_list} onClick={()=> listPagePrev()}>Пред стр</button>
-        <button className={pagination_button.button_list} onClick={()=> listPageNext()}>След стр</button>
+        <button className={pagination_button.button_list} onClick={listPagePrev}>Пред стр</button>
+        <button className={pagination_button.button_list} onClick={listPageNext}>След стр</button>
       </div>
     );
 }
